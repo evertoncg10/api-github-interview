@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "api-github-interview"
+  "defaultProject": "api-github-interview",
+  "cli": {
+    "analytics": false
+  }
 }
