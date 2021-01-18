@@ -1,0 +1,29 @@
+<div *ngIf="user" class="column row-card">
+  <!--col-12 col-md-6 mt-3-->
+  <div class="col-lg-4 col-md-8">
+    <div class="card card-structure">
+      <a routerLink="/user" (click)="this.goToUserByState(user)">
+        <img
+          class="card-img-top"
+          [src]="user.avatarUrl"
+          alt="Avatar do usuário">
+      </a>
+      <div class="card-body">
+        <a class="user-name" routerLink="/user" (click)="this.goToUserByState(user)">
+          <h4 class="card-title">{{user.name}}</h4>
+        </a>
+        <p class="card-text"><b>Localização:</b> {{user.location}}</p>
+        <p class="card-text-github"><b>GitHub:</b> {{user.urlGitHUb}}</p>
+        <a routerLink="/home" class="btn btn-primary card-button-repositorios"
+          (click)="getListRepositorysOfUserSearched()">Repositórios</a>
+        <a routerLink="/home" class="btn btn-dark card-button-repositorios-mais-visitados"
+          (click)="getListRepositorysMostVisitedOfUserSearched()">+ visitados</a>
+      </div>
+    </div>
+  </div>
+
+  <app-repositorys-list
+    [listRepositorys]="listRepositorys"
+    [listRepositorysMostVisited]="listRepositorysMostVisited"
+    [userName]="user.name"></app-repositorys-list>
+</div>

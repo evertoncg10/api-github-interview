@@ -1,0 +1,47 @@
+<div class="col-12 list-repositorys-structure" *ngIf="listRepositorys">
+  <span><h4>Repositórios do usuário {{userName}}</h4></span> <br>
+  <table class="table table-striped" aria-describedby="Lista de repositórios do usuário pesquisado">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">URL</th>
+        <th scope="col">Linguagem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repository of listRepositorys; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{repository.name}}</td>
+        <td>{{repository.full_name}}</td>
+        <td>{{repository.html_url}}</td>
+        <td>{{repository.language}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-12 list-repositorys-structure" *ngIf="listRepositorysMostVisited">
+  <span><h4>Repositórios mais visitados do usuário {{userName}}</h4></span> <br>
+  <table class="table table-striped" aria-describedby="Lista de repositórios mais visitados do usuário pesquisado">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">URL</th>
+        <th scope="col">Linguagem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repository of listRepositorysMostVisited; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{repository.name}}</td>
+        <td>{{repository.full_name}}</td>
+        <td>{{repository.html_url}}</td>
+        <td>{{repository.language}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
