@@ -17,13 +17,13 @@
             <p><b>Quantidade repositorios públicos:</b> {{user.publicRepos}}</p>
             <p><b>Seguidores:</b> {{user.followers}}</p>
             <p><b>Seguindo:</b> {{user.following}}</p>
-            <p><b>Data de criação:</b> {{user.DateCreated}}</p>
-            <p><b>Data última atualização:</b> {{user.DateUpdated}}</p>
+            <p><b>Data de criação:</b> {{user.DateCreated | localDateTime}}</p>
+            <p><b>Data última atualização:</b> {{user.DateUpdated | localDateTime}}</p>
           </div>
         </div>
         <br>
         <blockquote class="blockquote mb-0">
-          <footer class="blockquote-footer">GitHub:<cite title="Título da fonte"> https://api.github.com/users/evertoncg10</cite></footer>
+          <footer class="blockquote-footer">GitHub:<cite title="Título da fonte"> {{user.urlGitHUb}}</cite></footer>
         </blockquote>
       </div>
     </div>
