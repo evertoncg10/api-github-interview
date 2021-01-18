@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  padding-right: 50px;
+}
+
+.footer > span {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: aliceblue;
+}
